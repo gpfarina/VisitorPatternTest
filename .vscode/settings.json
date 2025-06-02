@@ -1,3 +1,6 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.testClass": ["mvn", "test", "-Dtest=${class}"],
+    "java.testMethod": ["mvn", "test", "-Dtest=${class}#${method}"],
+    "java.debugTestMethod": ["mvn", "test", "-Dtest=${class}#${method}", "-Dmaven.surefire.debug"],
 }

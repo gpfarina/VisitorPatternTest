@@ -3,11 +3,11 @@ package com.visitorpattern;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestExpr {
+public class TestEval {
     @Test
     public void testIntValue() {
         Int myInt = new Int(42);
-        assertEquals(42, myInt.getValue());
+        assertEquals(42, new EvalVisitor().visit(myInt));
     }
 
     @Test
